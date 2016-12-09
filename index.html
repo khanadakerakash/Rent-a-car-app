@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <meta name="Rent a Care" content="We are providing a best service in Bangladesh">
+        <meta name="author" content="Khandaker Akash">
+
+        <title>Rent a Car</title>
+
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet"  media="screen,projection">
+        <!-- include main css -->
+        <link href="assets/css/style.css" type="text/css" rel="stylesheet"  media="screen,projection">
+    </head>
+
+    <body>
+        <!-- Preloader
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+       Preloader -->
+
+        <!-- Start NAV Section -->
+        <nav class="lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="index.html" class="brand-logo">
+                    <img class="responsive-img" src="assets/images/logo-y.png" alt="Rent A Car">
+                </a>
+                <!-- Default Menu -->
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="income.php">Income</a></li>
+                    <li><a href="car_details.php">Car Details</a></li>
+                    <li><a href="booking_car.php">Booking Car</a></li>
+                    <li><a href="car_reg.php">Car Reg.</a></li>
+                </ul>
+                <!-- Mobile Menu -->
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="index.html"><img class="responsive-img" src="assets/images/logo-m.png" alt="Rent A Car"></a></li>
+                    <li><a href="income.php">Income</a></li>
+                    <li><a href="car_details.php">Car Details</a></li>
+                    <li><a href="booking_car.php">Booking Car</a></li>
+                    <li><a href="car_reg.php">Car Reg.</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        <!-- End NAV Section -->
+
+        <!-- Start Car Reg. Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5>List of Registered Car </h5>
+                    <!-- used for searching the current list -->
+                    <input type="text" class="form-control" placeholder="Search registered car...">
+
+                    <!-- table that shows product record list -->
+                    <table class="hoverable bordered">
+
+                        <thead>
+                        <tr>
+                            <th class="text-align-center">#</th>
+                            <th class="width-30-pct">Reg. No</th>
+                            <th class="width-30-pct">Engine No</th>
+                            <th class="text-align-center">Model</th>
+                            <th class="text-align-center">Action</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td class="text-align-center">1</td>
+                            <td>BMW-01</td>
+                            <td>BMW-67834</td>
+                            <td class="text-align-center">BMW X.1</td>
+                            <td>
+                                <a class="waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">edit</i>Edit</a>
+                                <a onclick="Materialize.toast('Registered car has deleted!', 1000)" class="waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">delete</i>Delete</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!-- modal for for creating new product -->
+                    <div id="modal-product-form" class="modal">
+                        <div class="modal-content">
+                            <h4 id="modal-product-title">Car Registration</h4>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" class="validate" id="car_reg_no" placeholder="Type car reg. no here...">
+                                    <label for="car_reg_no">Car Reg. No</label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <input type="text" class="validate" id="engin_no" placeholder="Type engine no here...">
+                                    <label for="engin_no">Engine No</label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <select id="car_model">
+                                        <option value="" disabled selected>Choose Car Model</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                    <label for="car_model">Model</label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <a id="btn-create-product" onclick="Materialize.toast('Car Registration has been successfully Done!', 1000)" class="waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">add</i>Save</a>
+
+                                    <a id="btn-update-product" onclick="Materialize.toast('Car Registration update has been successfully Done!', 1000)" class="waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">edit</i>Save Changes</a>
+
+                                    <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Close</a>
+                                </div>
+                            </div> <!-- end modal row -->
+                        </div> <!-- end modal-content -->
+                    </div> <!-- end modal for for creating new product -->
+                    <!-- floating button for creating product -->
+                    <div class="fixed-action-btn" style="bottom:45px; right:24px;">
+                        <a class="waves-effect waves-light btn modal-trigger btn-floating btn-large red" href="#modal-product-form"><i class="large material-icons">add</i></a>
+                    </div>
+                </div> <!-- end col s12 -->
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+        <!-- End Car Reg. Section -->
+
+        <!--Import jQuery-->
+        <script src="assets/js/jquery-2.1.1.min.js"></script>
+        <!--Import materialize.js-->
+        <script src="assets/js/materialize.min.js"></script>
+        <!--Import jquery-scripts.js-->
+        <script src="assets/js/myScripts.js"></script>
+    </body>
+</html>

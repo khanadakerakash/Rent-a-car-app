@@ -1,0 +1,36 @@
+/* ----------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------- */
+
+
+body {
+    background: #FCFCFC;
+    margin: 0;
+    padding: 0;
+}
+
+h5 {
+    color: #424242;
+}
+
+.width-30-pct{
+    width: 30%;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.margin-bottom-1em{
+    margin-bottom: 1em;
+}
+
+/* -- Navigation Bar -- */
+nav {
+    margin-bottom: 30px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
